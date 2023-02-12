@@ -1,0 +1,54 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+numberOfLatestPostsToShow: 3
+---
+
+<div class="about-me columns pb-5 pt-5 is-vcentered">
+	<div class="about-me-additional-infos column is-4 has-text-centered">
+		<div class="pb-2 about-me-photo">
+			<img class="photo" src="img/me.jpg"/>
+		</div>
+		<div class="socials">
+			<a href="" target="_blank">
+				<i class="bi-linkedin"></i>
+			</a>
+			<a href="https://twitter.com/therealjsie" target="_blank">
+				<i class="bi-twitter socials-2"></i>
+			</a>
+			<a href="https://github.com/therealjsie" target="_blank">
+				<i class="bi-github"></i>
+			</a>
+		</div>
+	</div>
+	<div class="column is-8">
+		<div class="about-me-description">
+			<span class="intro">Hey, my name is Johannes Siebel</span>. I'm an engineer with a strong drive for software and systems engineering. I enjoy automating things and making them more reliable. My work focuses on building development platforms and improving engineering practices. Feel free to contact me on the platforms listed here.
+		</div>
+	</div>
+</div>
+
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+	<p>
+		<a href="/blog/">All posts ({{ morePosts }} more)</a>
+	</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}
