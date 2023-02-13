@@ -20,9 +20,11 @@ layout: layouts/base.njk
 		{%- endfor %}
 	</small>
 
-	<h1 class="is-size-4 mt-3 mb-4">{{ title }}</h1>
+	<h1 class="is-size-1 mt-3 mb-4">{{ title }}</h1>
 
-	{{ content | safe }}
+	<div class="content">
+		{{ content | safe }}
+	</div>
 
 	{%- if collections.posts %}
 		{%- set previousPost = collections.posts | getPreviousCollectionItem %}

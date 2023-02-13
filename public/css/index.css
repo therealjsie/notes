@@ -55,7 +55,7 @@ h1 > a[href], h2 > a[href], .socials > a[href] {
 }
 
 .socials i {
-	font-size: 1.3em;
+	font-size: 1.3rem;
 }
 
 pre,
@@ -71,39 +71,8 @@ code {
 	border-bottom: 1px solid #eee;
 }
 
-.socials-2 {
-	padding-left: 1em;
-	padding-right: 1em;
-}
-
 .postlist-item {
 	border-bottom: 1px solid #eee;
-}
-
-.about-me-photo img {
-	width: 150px;
-	height: 150px;
-	position: relative;
-	overflow: hidden;
-	border-radius: 50%;
-}
-
-article > p {
-	padding-bottom: .5em;
-}
-
-article > h2 {
-	font-size: 1.4rem;
-	padding: 0.4em 0;
-}
-
-article > h3 {
-	font-size: 1.25rem;
-	padding: 0.3em 0;
-}
-
-article .header-anchor {
-	display: none;
 }
 
 .intro {

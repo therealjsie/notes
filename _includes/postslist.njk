@@ -3,7 +3,7 @@
 		<div class="pb-4 mb-4 postlist-item">
 			<i class="bi bi-calendar4 has-text-grey-light" style="font-size: .7em"></i>
 			<time class="postlist-date is-size-7 has-text-grey-light" datetime="{{ post.date | myDateString }}">{{ post.date | readableDate("dd LLL yyyy") }}</time>
-			<h2 class="is-size-4 pb-2 {% if post.url == url %} postlist-item-active{% endif %}">
+			<h2 class="is-size-2 pb-2 {% if post.url == url %} postlist-item-active{% endif %}">
 				<a href="{{ post.url }}" class="postlist-link">
 					{% if post.data.title %}{{ post.data.title }}
 					{% else %}

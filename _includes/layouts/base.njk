@@ -22,32 +22,38 @@
 	</head>
 	<body>
 		<header class="section py-0 my-0">
-			<div class="columns is-centered">
-				<div class="column is-four-fifths-tablet is-three-fifths-desktop py-5 my-3 title-section">
-					<h1 class="is-size-3">
-						<a href="/" class="home-link">{{ metadata.title }}</a>
-					</h1>
+			<div class="container">
+				<div class="columns is-centered">
+					<div class="column is-four-fifths-tablet is-three-fifths-desktop py-5 my-3 title-section">
+						<h1 class="is-size-3">
+							<a href="/" class="home-link">{{ metadata.title }}</a>
+						</h1>
+					</div>
 				</div>
 			</div>
 		</header>
 
 		<section class="section pt-3">
-			<div class="columns is-centered">
-				<div class="column is-four-fifths-tablet is-three-fifths-desktop">
-					{{ content | safe }}
+			<div class="container">
+				<div class="columns is-centered">
+					<div class="column is-four-fifths-tablet is-three-fifths-desktop">
+						{{ content | safe }}
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<footer class="footer has-background-white">
-			<small class="content has-text-centered">
-				<p>
-					<span>
+			<div class="container">
+				<small class="content has-text-centered">
+					<p>
+						<span>
 						© 2016-{% year %}
-					</span>
-					<a href="https://jsie.de">Johannes Siebel</a>
-				</p>
-			</small>
+						</span>
+						<a href="https://jsie.de">Johannes Siebel</a>
+					</p>
+				</small>
+			</div>
 		</footer>
 	</body>
 </html>
