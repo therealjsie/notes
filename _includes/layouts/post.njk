@@ -6,11 +6,11 @@ layout: layouts/base.njk
 {% include "node_modules/prismjs/themes/prism-okaidia.css" %}
 {%- endcss %}
 <article class="post">
-	<small class="post-metadata">
-		<p>
+	<p class="pt-3 post-metadata">
+		<small>
 			<i class="bi bi-calendar4 has-text-grey-light" style="font-size: .7em"></i>
 			<time class="has-text-grey-light" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("dd LLL yyyy") }}</time>
-		</p>
+		</small>
 		{%- for tag in tags | filterTagList %}
 			{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 			<span>
@@ -18,9 +18,9 @@ layout: layouts/base.njk
 				{%- if not loop.last %}, {% endif %}
 			</span>
 		{%- endfor %}
-	</small>
+	</p>
 
-	<h1 class="is-size-1 mt-3 mb-4">{{ title }}</h1>
+	<h1 class="block title is-size-1 mt-3 mb-4">{{ title }}</h1>
 
 	<div class="content">
 		{{ content | safe }}

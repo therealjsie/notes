@@ -6,7 +6,7 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 3
 ---
 
-<div class="about-me columns pb-5 pt-5 is-vcentered">
+<div class="about-me columns py-4 block is-vcentered">
 	<div class="about-me-additional-infos column is-4 has-text-centered">
 		<div class="pb-2 about-me-photo">
 			<figure class="image is-128x128 has-text-centered is-inline-block">
@@ -41,7 +41,7 @@ numberOfLatestPostsToShow: 3
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-	<p>
+	<p class="pt-5">
 		<a href="/blog/">All posts ({{ morePosts }} more)</a>
 	</p>
 {% endif %}

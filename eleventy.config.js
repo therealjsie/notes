@@ -6,6 +6,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const Haikunator = require("haikunator");
 
 module.exports = function (eleventyConfig) {
   // Copy the contents of the `public` folder to the output folder
@@ -60,6 +61,10 @@ module.exports = function (eleventyConfig) {
 
   // Shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+
+  eleventyConfig.addShortcode("buildTag", () =>
+    new Haikunator().haikunate({ tokenLength: 8 })
+  );
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {

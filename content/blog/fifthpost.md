@@ -8,7 +8,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus justo eu tor
 
 <!-- excerpt -->
 
-## Donec mattis sapien sit amet euismod imperdiet
+## Donec mattis sapien sit amet euismod
 
 In rutrum volutpat erat. Proin in tempus tortor. Curabitur aliquam sed metus ac viverra. Aliquam erat volutpat. Integer erat magna, fermentum in dignissim eget, maximus a diam. Nulla facilisi. Nulla ultrices fringilla quam at tempus. Etiam sagittis arcu in elit vehicula pulvinar. Fusce sit amet lectus vitae nunc facilisis dictum.
 

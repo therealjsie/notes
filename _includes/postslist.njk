@@ -1,9 +1,13 @@
 <div reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
 	{% for post in postslist | reverse %}
-		<div class="pb-4 mb-4 postlist-item">
-			<i class="bi bi-calendar4 has-text-grey-light" style="font-size: .7em"></i>
-			<time class="postlist-date is-size-7 has-text-grey-light" datetime="{{ post.date | myDateString }}">{{ post.date | readableDate("dd LLL yyyy") }}</time>
-			<h2 class="is-size-2 pb-2 {% if post.url == url %} postlist-item-active{% endif %}">
+		<div class="postlist-item py-4">
+			<p>
+				<i class="bi bi-calendar4 has-text-grey-light" style="font-size: .7em"></i>
+				<small>
+					<time class="postlist-date has-text-grey-light" datetime="{{ post.date | myDateString }}">{{ post.date | readableDate("dd LLL yyyy") }}</time>
+				</small>
+			</p>
+			<h2 class="is-size-1 pb-4 pt-1 {% if post.url == url %} postlist-item-active{% endif %}">
 				<a href="{{ post.url }}" class="postlist-link">
 					{% if post.data.title %}{{ post.data.title }}
 					{% else %}
@@ -11,7 +15,9 @@
 					{% endif %}
 				</a>
 			</h2>
-			<p>{{ post.data.page.excerpt }}</p>
+			<p class="pb-5">
+				{{ post.data.page.excerpt }}
+			</p>
 		</div>
 	{% endfor %}
 </div>

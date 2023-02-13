@@ -12,9 +12,9 @@
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-		{%- css %}{% include "node_modules/bulma/css/bulma.css" %}{% endcss %}
 		{%- css %}{% include "node_modules/bootstrap-icons/font/bootstrap-icons.css" %}{% endcss %}
 		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		{%- css %}{% include "public/css/styles.css" %}{% endcss %}
 
 		<style>
 			{% getBundle "css" %}
@@ -43,7 +43,7 @@
 			</div>
 		</section>
 
-		<footer class="footer has-background-white">
+		<footer class="footer">
 			<div class="container">
 				<small class="content has-text-centered">
 					<p>
@@ -51,6 +51,9 @@
 						© 2016-{% year %}
 						</span>
 						<a href="https://jsie.de">Johannes Siebel</a>
+					</p>
+					<p class="has-text-grey-light">
+						Build: {% buildTag %}
 					</p>
 				</small>
 			</div>
