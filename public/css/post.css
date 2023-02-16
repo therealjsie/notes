@@ -1,0 +1,15 @@
+.header-anchor {
+  color: #efefef !important;
+}
+
+h2:hover .header-anchor {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+h3:hover .header-anchor {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=post.css.map */

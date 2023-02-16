@@ -23,7 +23,7 @@
 		<header class="section py-0 my-0">
 			<div class="container">
 				<div class="columns is-centered">
-					<div class="column is-four-fifths-tablet is-three-fifths-desktop py-5 my-3 title-section">
+					<div class="column is-three-fifths-tablet is-half-desktop py-5 my-3 title-section">
 						<h1 class="is-size-3">
 							<a href="/" class="home-link">{{ metadata.title }}</a>
 						</h1>
@@ -35,7 +35,7 @@
 		<section class="section pt-3">
 			<div class="container">
 				<div class="columns is-centered">
-					<div class="column is-four-fifths-tablet is-three-fifths-desktop">
+					<div class="column is-three-fifths-tablet is-half-desktop">
 						{{ content | safe }}
 					</div>
 				</div>
@@ -44,17 +44,25 @@
 
 		<footer class="footer">
 			<div class="container">
-				<small class="content has-text-centered">
-					<p>
-						<span>
+				<div class="columns is-centered">
+					<div class="column is-three-fifths-tablet is-half-desktop">
+						<small class="content has-text-centered">
+							<p>
+								<span>
 						© 2016-{% year %}
-						</span>
-						<a href="https://jsie.de">Johannes Siebel</a>
-					</p>
-					<p class="has-text-grey">
-						Build: {% buildTag %}
-					</p>
-				</small>
+								</span>
+								<a href="https://jsie.de">Johannes Siebel</a>
+							</p>
+							<p class="has-text-grey">
+								The content of this blog is published under <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="blank">CC BY-ND 4.0</a> license.
+								The source for the blog is published under <a href="https://github.com/therealjsie/notes/blob/main/LICENSE" target="_blank">MIT</a> license.
+							</p>
+							<p class="has-text-grey">
+								Build: {% buildTag %}
+							</p>
+						</small>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</body>

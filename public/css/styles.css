@@ -1,8 +1,30 @@
 @charset "UTF-8";
-body {
-  background-color: #efefef;
+.header-anchor {
+  color: #efefef !important;
 }
 
+h2:hover .header-anchor {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+h3:hover .header-anchor {
+  color: #333 !important;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "bootstrap-icons";
+  src: url("/css/fonts/bootstrap-icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RalewayRegular";
+  src: url("/css/fonts/Raleway-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 .pagination-previous,
@@ -1458,7 +1480,7 @@ a.box:active {
   font-size: 0.75rem;
 }
 .button.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .button[disabled], fieldset[disabled] .button {
   background-color: hsl(0deg, 0%, 100%);
@@ -1521,7 +1543,7 @@ a.box:active {
   font-size: 0.75rem;
 }
 .buttons.are-large .button:not(.is-small):not(.is-normal):not(.is-medium) {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .buttons.has-addons .button:not(:first-child) {
   border-bottom-left-radius: 0;
@@ -1797,7 +1819,7 @@ a.box:active {
   font-size: 0.75rem;
 }
 .content.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon {
@@ -2218,7 +2240,7 @@ div.icon-text {
   height: 0.75rem;
 }
 .progress.is-large {
-  height: 1rem;
+  height: 0.9rem;
 }
 
 @keyframes moveIndeterminate {
@@ -2616,7 +2638,7 @@ a.tag:hover {
 
 .title {
   color: hsl(0deg, 0%, 21%);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -2628,16 +2650,16 @@ a.tag:hover {
   margin-top: -1.25rem;
 }
 .title.is-1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .title.is-2 {
-  font-size: 1.5rem;
-}
-.title.is-3 {
   font-size: 1.25rem;
 }
-.title.is-4 {
+.title.is-3 {
   font-size: 1rem;
+}
+.title.is-4 {
+  font-size: 0.9rem;
 }
 .title.is-5 {
   font-size: 0.75rem;
@@ -2663,16 +2685,16 @@ a.tag:hover {
   margin-top: -1.25rem;
 }
 .subtitle.is-1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .subtitle.is-2 {
-  font-size: 1.5rem;
-}
-.subtitle.is-3 {
   font-size: 1.25rem;
 }
-.subtitle.is-4 {
+.subtitle.is-3 {
   font-size: 1rem;
+}
+.subtitle.is-4 {
+  font-size: 0.9rem;
 }
 .subtitle.is-5 {
   font-size: 0.75rem;
@@ -2828,7 +2850,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .is-large.textarea, .is-large.input {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .is-fullwidth.textarea, .is-fullwidth.input {
   display: block;
@@ -3065,7 +3087,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .select.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .select.is-disabled::after {
   border-color: hsl(0deg, 0%, 48%) !important;
@@ -3091,7 +3113,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .select.is-loading.is-large:after {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .file {
@@ -3313,7 +3335,7 @@ a.tag:hover {
   font-size: 21px;
 }
 .file.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .file.is-large .file-icon .fa {
   font-size: 28px;
@@ -3475,7 +3497,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .label.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .help {
@@ -3651,7 +3673,7 @@ a.tag:hover {
     padding-top: 0.375em;
   }
   .field-label.is-large {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-top: 0.375em;
   }
 }
@@ -3705,7 +3727,7 @@ a.tag:hover {
 .control.has-icons-left .input.is-large ~ .icon,
 .control.has-icons-left .select.is-large ~ .icon, .control.has-icons-right .input.is-large ~ .icon,
 .control.has-icons-right .select.is-large ~ .icon {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .control.has-icons-left .icon, .control.has-icons-right .icon {
   color: hsl(0deg, 0%, 86%);
@@ -3743,7 +3765,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .control.is-loading.is-large:after {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Bulma Components */
@@ -3805,7 +3827,7 @@ a.tag:hover {
   font-size: 0.75rem;
 }
 .breadcrumb.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .breadcrumb.has-arrow-separator li + li::before {
   content: "→";
@@ -4156,7 +4178,7 @@ button.dropdown-item.is-active {
   font-size: 0.75rem;
 }
 .menu.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .menu-list {
@@ -4214,7 +4236,7 @@ button.dropdown-item.is-active {
   font-size: 0.75rem;
 }
 .message.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .message.is-white {
   background-color: white;
@@ -4434,7 +4456,7 @@ button.dropdown-item.is-active {
   color: hsl(0deg, 0%, 21%);
   flex-grow: 1;
   flex-shrink: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1;
 }
 
@@ -5462,7 +5484,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   font-size: 0.75rem;
 }
 .pagination.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 .pagination.is-rounded .pagination-previous,
 .pagination.is-rounded .pagination-next {
@@ -5950,7 +5972,7 @@ label.panel-block:hover {
   font-size: 0.75rem;
 }
 .tabs.is-large {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* Bulma Grid */
@@ -8761,19 +8783,19 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .is-size-1 {
-  font-size: 2rem !important;
+  font-size: 1.6rem !important;
 }
 
 .is-size-2 {
-  font-size: 1.5rem !important;
-}
-
-.is-size-3 {
   font-size: 1.25rem !important;
 }
 
-.is-size-4 {
+.is-size-3 {
   font-size: 1rem !important;
+}
+
+.is-size-4 {
+  font-size: 0.9rem !important;
 }
 
 .is-size-5 {
@@ -8790,16 +8812,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-mobile {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-mobile {
     font-size: 1.25rem !important;
   }
-  .is-size-4-mobile {
+  .is-size-3-mobile {
     font-size: 1rem !important;
+  }
+  .is-size-4-mobile {
+    font-size: 0.9rem !important;
   }
   .is-size-5-mobile {
     font-size: 0.75rem !important;
@@ -8813,16 +8835,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-tablet {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-tablet {
     font-size: 1.25rem !important;
   }
-  .is-size-4-tablet {
+  .is-size-3-tablet {
     font-size: 1rem !important;
+  }
+  .is-size-4-tablet {
+    font-size: 0.9rem !important;
   }
   .is-size-5-tablet {
     font-size: 0.75rem !important;
@@ -8836,16 +8858,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (max-width: 1023px) {
   .is-size-1-touch {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-touch {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-touch {
     font-size: 1.25rem !important;
   }
-  .is-size-4-touch {
+  .is-size-3-touch {
     font-size: 1rem !important;
+  }
+  .is-size-4-touch {
+    font-size: 0.9rem !important;
   }
   .is-size-5-touch {
     font-size: 0.75rem !important;
@@ -8859,16 +8881,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (min-width: 1024px) {
   .is-size-1-desktop {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-desktop {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-desktop {
     font-size: 1.25rem !important;
   }
-  .is-size-4-desktop {
+  .is-size-3-desktop {
     font-size: 1rem !important;
+  }
+  .is-size-4-desktop {
+    font-size: 0.9rem !important;
   }
   .is-size-5-desktop {
     font-size: 0.75rem !important;
@@ -8882,16 +8904,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (min-width: 1216px) {
   .is-size-1-widescreen {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-widescreen {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-widescreen {
     font-size: 1.25rem !important;
   }
-  .is-size-4-widescreen {
+  .is-size-3-widescreen {
     font-size: 1rem !important;
+  }
+  .is-size-4-widescreen {
+    font-size: 0.9rem !important;
   }
   .is-size-5-widescreen {
     font-size: 0.75rem !important;
@@ -8905,16 +8927,16 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (min-width: 1408px) {
   .is-size-1-fullhd {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
   }
   .is-size-2-fullhd {
-    font-size: 1.5rem !important;
-  }
-  .is-size-3-fullhd {
     font-size: 1.25rem !important;
   }
-  .is-size-4-fullhd {
+  .is-size-3-fullhd {
     font-size: 1rem !important;
+  }
+  .is-size-4-fullhd {
+    font-size: 0.9rem !important;
   }
   .is-size-5-fullhd {
     font-size: 0.75rem !important;
@@ -10285,36 +10307,27 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 3rem 1.5rem 6rem;
 }
 
-/* Defaults */
 :root {
-  --font-size: 1.05em;
+  --font-size: .95rem;
   --font-family: "RalewayRegular", -apple-system, system-ui, sans-serif;
   --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
-/* Theme colors */
 :root {
-  --color-gray-20: #e0e0e0;
-  --color-gray-50: #C0C0C0;
-  --color-gray-90: #666;
-  --accent-color: #ae070f;
-  --background-color: #efefef;
   --text-color: hsl(0, 0%, 29%);
   --text-color-link: #333;
-  --text-color-link-active: var(--accent-color);
-  --text-color-link-visited: var(--accent-color);
-  --separator-color: #ddd;
+  --text-color-link-active: base.$accent-color;
+  --text-color-link-visited: base.$accent-color;
   --syntax-tab-size: 2;
 }
 
-/* Global stylesheet */
 html,
 body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   line-height: 180%;
   color: var(--text-color);
-  background-color: var(--background-color);
+  background-color: #efefef;
 }
 
 h1, h2, h3, h4 {
@@ -10326,27 +10339,20 @@ a[href] {
   text-decoration: underline;
   color: var(--text-color-link);
 }
-
 a[href]:visited {
   color: var(--text-color-link-visited);
 }
-
-a[href]:hover,
-a[href]:active {
+a[href]:hover, a[href]:active {
   color: var(--text-color-link-active);
 }
 
 h1 > a, h2 > a {
-  color: var(--accent-color) !important;
+  color: #ae070f !important;
 }
 
 h1 > a[href], h2 > a[href], .socials > a[href] {
   text-decoration: none;
   color: var(--text-color-link);
-}
-
-.socials i {
-  font-size: 1.3rem;
 }
 
 pre,
@@ -10355,15 +10361,25 @@ code {
 }
 
 .title-section {
-  border-bottom: 1px solid var(--separator-color);
+  border-bottom: 1px solid #ddd;
 }
 
 .about-me {
-  border-bottom: 1px solid var(--separator-color);
+  border-bottom: 1px solid #ddd;
 }
 
 .postlist-item {
-  border-bottom: 1px solid var(--separator-color);
+  border-bottom: 1px solid #ddd;
+}
+
+.content h1 {
+  font-size: 1.6rem;
+}
+.content h2 {
+  font-size: 1.25rem;
+}
+.content h3 {
+  font-size: 1rem;
 }
 
 .intro {
@@ -10372,32 +10388,6 @@ code {
 
 footer {
   background-color: #efefef !important;
-}
-
-@font-face {
-  font-family: "bootstrap-icons";
-  src: url("/css/fonts/bootstrap-icons.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "RalewayRegular";
-  src: url("/css/fonts/Raleway-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-.header-anchor {
-  color: #efefef !important;
-}
-
-h2:hover .header-anchor {
-  color: #333 !important;
-  text-decoration: none;
-}
-
-h3:hover .header-anchor {
-  color: #333 !important;
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

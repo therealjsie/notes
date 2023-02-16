@@ -1,0 +1,15 @@
+@use 'base';
+
+.header-anchor {
+    color: base.$background-color !important;
+}
+
+h2:hover .header-anchor {
+    color: base.$font-color !important;
+    text-decoration: none;
+}
+
+h3:hover .header-anchor {
+    color: base.$font-color !important;
+    text-decoration: none;
+}

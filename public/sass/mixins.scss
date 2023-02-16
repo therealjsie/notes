@@ -1,0 +1,10 @@
+@use 'base';
+
+@mixin divided() {
+	border-bottom: 1px solid base.$separator-color;
+}
+
+@mixin clean_link() {
+	text-decoration: none;
+	color: var(--text-color-link)
+}

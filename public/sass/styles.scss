@@ -1,56 +1,40 @@
 @charset "utf-8";
+@use 'base';
+@use 'post';
+@use 'fonts';
+@use 'mixins';
 
-body {
-    background-color: #efefef;
-}
-
-$primary-color: #eee;
-$font-color: #333;
-
-$size-1: 2rem;
-$size-2: 1.5rem;
-$size-3: 1.25rem;
-$size-4: 1rem;
+$size-1: 1.60rem;
+$size-2: 1.25rem;
+$size-3: 1.00rem;
+$size-4: 0.90rem;
 $size-5: 0.75rem;
 $size-6: 0.75rem;
 $size-7: 0.75rem;
 
 @import "../../node_modules/bulma/bulma.sass";
 
-/* Defaults */
 :root {
-	--font-size: 1.05em;
+	--font-size: .95rem;
 	--font-family: "RalewayRegular", -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
-/* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #666;
-
-	--accent-color: #ae070f;
-	--background-color: #efefef;
-
 	--text-color: hsl(0, 0%, 29%);
 	--text-color-link: #333;
-	--text-color-link-active: var(--accent-color);
-	--text-color-link-visited: var(--accent-color);
-
-	--separator-color: #ddd;
-
+	--text-color-link-active: base.$accent-color;
+	--text-color-link-visited: base.$accent-color;
 	--syntax-tab-size: 2;
 }
 
-/* Global stylesheet */
 html,
 body {
 	font-family: var(--font-family);
 	font-size: var(--font-size);
 	line-height: 180%;
 	color: var(--text-color);
-	background-color: var(--background-color);
+	background-color: base.$background-color;
 }
 
 h1, h2, h3, h4 {
@@ -61,28 +45,22 @@ h1, h2, h3, h4 {
 a[href] {
 	text-decoration: underline;
 	color: var(--text-color-link);
-}
 
-a[href]:visited {
-	color: var(--text-color-link-visited);
-}
+	&:visited {
+		color: var(--text-color-link-visited);
+	}
 
-a[href]:hover,
-a[href]:active {
-	color: var(--text-color-link-active);
+	&:hover, &:active {
+		color: var(--text-color-link-active);
+	}
 }
 
 h1 > a, h2 > a {
-	color: var(--accent-color) !important;
+	color: base.$accent-color !important;
 }
 
 h1 > a[href], h2 > a[href], .socials > a[href] {
-	text-decoration: none;
-	color: var(--text-color-link)
-}
-
-.socials i {
-	font-size: 1.3rem;
+	@include mixins.clean_link
 }
 
 pre,
@@ -91,15 +69,29 @@ code {
 }
 
 .title-section {
-	border-bottom: 1px solid var(--separator-color);
+	@include mixins.divided
 }
 
 .about-me {
-	border-bottom: 1px solid var(--separator-color);
+	@include mixins.divided
 }
 
 .postlist-item {
-	border-bottom: 1px solid var(--separator-color);
+	@include mixins.divided
+}
+
+.content {
+	h1 {
+		font-size: $size-1;
+	}
+
+	h2 {
+		font-size: $size-2;
+	}
+
+	h3 {
+		font-size: $size-3;
+	}
 }
 
 .intro {
@@ -107,34 +99,5 @@ code {
 }
 
 footer {
-	background-color: #efefef !important;
+	background-color: base.$background-color !important;
 }
-
-@font-face {
-    font-family: 'bootstrap-icons';
-    src: url('/css/fonts/bootstrap-icons.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'RalewayRegular';
-    src: url('/css/fonts/Raleway-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.header-anchor {
-    color: #efefef !important;
-}
-
-h2:hover .header-anchor {
-    color: $font-color !important;
-    text-decoration: none;
-}
-
-h3:hover .header-anchor {
-    color: $font-color !important;
-    text-decoration: none;
-}
-
