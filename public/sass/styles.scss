@@ -47,7 +47,7 @@ a[href] {
 	color: var(--text-color-link);
 
 	&:visited {
-		color: var(--text-color-link-visited);
+		color: var(--text-color-link-active);
 	}
 
 	&:hover, &:active {
