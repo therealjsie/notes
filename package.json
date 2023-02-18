@@ -3,7 +3,7 @@
   "version": "8.0.0",
   "description": "A starter repository for a blog web site using the Eleventy site generator.",
   "scripts": {
-    "build": "npx @11ty/eleventy",
+    "build": "npx sass public/sass:public/css && npx @11ty/eleventy",
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
